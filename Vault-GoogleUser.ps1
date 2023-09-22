@@ -29,7 +29,7 @@
 	.EXAMPLE
 		This example shows what might be entered as a csv file and save location.
 			
-		PS C:\> Vault-AGUser -GAMCSVFilePath C:\Users\<USERNAME>\gam\users09.12.2020.csv -ExportDataLocation <NETWORK SHARE>
+		PS C:\> Vault-GoogleUser -GAMCSVFilePath C:\Users\<USERNAME>\gam\users09.12.2020.csv -ExportDataLocation <NETWORK SHARE>
 
 		
 #>
@@ -104,7 +104,7 @@ Function Vault-GoogleUser
 		#Ensure this is running from a VM before doing anything, otherwise stop the script.
 		if (!((Get-ComputerInfo).BiosManufacturer -match "VMware"))
 		{
-			Throw "Error: Vault-AGUser script not running from a Virtual Machine."
+			Throw "Error: Vault-GoogleUser script not running from a Virtual Machine."
 		}
 	
 
